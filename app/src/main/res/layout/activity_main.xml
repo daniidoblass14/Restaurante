@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Button
+        android:id="@+id/btnFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FECHA"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <Button
+        android:id="@+id/btnHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HORA"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="292dp"
+        android:layout_below="@id/btnFecha"/>
+
+    <EditText
+        android:id="@+id/edtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="0dp"
+        android:contextClickable="false"
+        android:ems="10"
+        android:inputType="none"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="218dp"
+        android:focusable="false"
+        android:textIsSelectable="false"/>
+
+    <EditText
+        android:id="@+id/edtHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtFecha"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="none"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="292dp"
+        android:focusable="false"
+        android:textIsSelectable="false"/>/>
+</RelativeLayout>
