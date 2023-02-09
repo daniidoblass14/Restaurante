@@ -46,5 +46,21 @@
         tools:layout_editor_absoluteX="150dp"
         tools:layout_editor_absoluteY="292dp"
         android:focusable="false"
-        android:textIsSelectable="false"/>/>
+        android:textIsSelectable="false"/>
+
+    <TextView
+        android:id="@+id/tvPersonas"
+        android:layout_width="88dp"
+        android:layout_height="34dp"
+        android:layout_below="@id/btnHora"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="PERSONAS" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtHora"
+        android:layout_alignParentRight="true" />
 </RelativeLayout>
