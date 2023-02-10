@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvIdReserva"
+        android:layout_width="154dp"
+        android:layout_height="56dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Id de la reserva"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <EditText
+        android:id="@+id/edtIdReserva"
+        android:layout_width="155dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:contextClickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="number"
+        android:textIsSelectable="false"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <TextView
+        android:id="@+id/tvPrecio"
+        android:layout_width="154dp"
+        android:layout_height="56dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="."
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="217dp"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/btnPagar"/>
+
+    <Button
+        android:id="@+id/btnPagar"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="PAGAR"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="292dp" />
+</RelativeLayout>

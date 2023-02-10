@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvIDisponibles"
+        android:layout_width="154dp"
+        android:layout_height="56dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Disponibles"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <TextView
+        android:id="@+id/tvOcupadas"
+        android:layout_width="154dp"
+        android:layout_height="33dp"
+        android:layout_below="@id/tvIDisponibles"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Ocupadas"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <TextView
+        android:id="@+id/tvOcupadasEdit"
+        android:layout_width="154dp"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-1dp"
+        android:contextClickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:textIsSelectable="false"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <TextView
+        android:id="@+id/tvDsponiblesEdit"
+        android:layout_width="154dp"
+        android:layout_height="33dp"
+        android:layout_below="@id/tvOcupadasEdit"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:textIsSelectable="false"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="volver"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="292dp" />
+</RelativeLayout>

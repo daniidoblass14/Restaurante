@@ -20,6 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Reservas" />
+        <activity android:name=".Anular" />
+        <activity android:name=".Pago" />
+        <activity android:name=".Confirmacion" />
+        <activity android:name=".Disponibilidad" />
+
     </application>
 
 </manifest>
