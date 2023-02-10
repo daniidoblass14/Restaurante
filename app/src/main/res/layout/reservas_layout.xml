@@ -58,9 +58,20 @@
         android:text="PERSONAS" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="210dp"
+        android:id="@+id/spinnerPersonas"
+        android:layout_width="139dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/edtHora"
-        android:layout_alignParentRight="true" />
+        android:layout_marginLeft="183dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/tvPersonas" />
+
+    <Button
+        android:id="@+id/btnReserva"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="RESERVAR"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="292dp" />
 </RelativeLayout>
