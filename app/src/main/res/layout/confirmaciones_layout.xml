@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutConfirmacion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
@@ -22,9 +23,7 @@
         android:layout_marginEnd="0dp"
         android:contextClickable="false"
         android:ems="10"
-        android:focusable="false"
         android:inputType="number"
-        android:textIsSelectable="false"
         tools:layout_editor_absoluteX="150dp"
         tools:layout_editor_absoluteY="218dp" />
 
@@ -37,13 +36,21 @@
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="292dp"
         android:layout_below="@id/tvIdReserva"/>
+
     <Button
         android:id="@+id/btnVisualizarConfirmados"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/btnConfirmar"
         android:layout_centerInParent="true"
         android:text="Ver confirmados"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="292dp"
-        android:layout_below="@id/btnConfirmar"/>
+        tools:layout_editor_absoluteY="292dp" />
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_below="@id/btnVisualizarConfirmados">
+    </TableLayout>
 </RelativeLayout>

@@ -33,9 +33,7 @@
         android:layout_marginRight="0dp"
         android:contextClickable="false"
         android:ems="10"
-        android:focusable="false"
         android:inputType="number"
-        android:textIsSelectable="false"
         tools:layout_editor_absoluteX="150dp"
         tools:layout_editor_absoluteY="218dp" />
 
@@ -46,9 +44,7 @@
         android:layout_below="@id/edtIdReserva"
         android:layout_alignParentRight="true"
         android:ems="10"
-        android:focusable="false"
         android:inputType="none"
-        android:textIsSelectable="false"
         tools:layout_editor_absoluteX="150dp"
         tools:layout_editor_absoluteY="292dp" />
 

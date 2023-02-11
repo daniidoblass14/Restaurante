@@ -51,4 +51,13 @@
         android:text="PAGO"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="292dp" />
+    <Button
+        android:id="@+id/btnTotalRecaudado"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="TOTAL RECAUDADO"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="292dp"
+        android:layout_below="@id/btnPago"/>
 </RelativeLayout>

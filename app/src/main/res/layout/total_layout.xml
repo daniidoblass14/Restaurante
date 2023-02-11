@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="128dp"
+        android:layout_height="312dp"
+        android:layout_above="@+id/btnVolver"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Disponibles"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="volver"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="292dp" />
+</RelativeLayout>

@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intentPagar = new Intent(this,Pago.class);
         Intent intentConfirmacion = new Intent(this,Confirmacion.class);
         Intent intentDisponibilidad = new Intent(this,Disponibilidad.class);
+        Intent intentTotalRecaudado = new Intent(this,TotalRecaudado.class);
 
         if(v.getId() == R.id.btnReservas){
 
@@ -57,6 +58,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v.getId() == R.id.btnDisponibilidad){
 
             startActivity(intentDisponibilidad);
+        }
+        if(v.getId() == R.id.btnTotalRecaudado){
+
+            startActivity(intentTotalRecaudado);
         }
     }
 }
