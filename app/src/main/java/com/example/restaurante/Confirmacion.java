@@ -46,13 +46,13 @@ public class Confirmacion extends AppCompatActivity implements View.OnClickListe
         if(v.getId() == R.id.btnConfirmar){
 
             String nombre ="";
-            int id = Integer.parseInt(edtIdReserva.getText().toString());
+            int numeroTelefono = Integer.parseInt(edtIdReserva.getText().toString());
 
             //Abrimos la base de datos, de forma leectura.
             ActivitySQLiteHelper acdbh = new ActivitySQLiteHelper(Confirmacion.this, "restaurante",null,1);
             SQLiteDatabase db = acdbh.getReadableDatabase();
 
-            Cursor cNombre = db.rawQuery(" SELECT nombre FROM reservas WHERE id="+id,null);
+            Cursor cNombre = db.rawQuery(" SELECT nombre FROM reservas WHERE numeroTelefono="+numeroTelefono,null);
 
             //Nos aseguramos de que existe al menos un registro
             if (cNombre.moveToFirst()) {
@@ -63,11 +63,11 @@ public class Confirmacion extends AppCompatActivity implements View.OnClickListe
             }
 
             //Comprobamos que si existe en la bbdd
-            Cursor c = db.rawQuery("SELECT COUNT(*) FROM confirmaciones WHERE idReserva = "+id,null);
+            Cursor c = db.rawQuery("SELECT COUNT(*) FROM confirmaciones WHERE numeroTelefono = "+numeroTelefono,null);
 
             if (c.moveToFirst() && c.getInt(0) == 0) {
                 // Sentencia SQL para insertar el nuevo registro
-                db.execSQL("INSERT INTO confirmaciones (idReserva, nombre) VALUES ('" + id + "', '" + nombre + "')");
+                db.execSQL("INSERT INTO confirmaciones (numeroTelefono, nombre) VALUES ('" + numeroTelefono + "', '" + nombre + "')");
                 Toast.makeText(getApplicationContext(), "CONFIRMADO ", Toast.LENGTH_SHORT).show();
             } else {
                 // Mensaje de error, el registro ya existe
@@ -112,7 +112,7 @@ public class Confirmacion extends AppCompatActivity implements View.OnClickListe
 
                 //Creamos las celdas para las filas.
                 TextView col1 = new TextView(this);
-                col1.setText(c.getString(c.getColumnIndex("idReserva")));
+                col1.setText(c.getString(c.getColumnIndex("numeroTelefono")));
                 col1.setGravity(Gravity.CENTER);
                 tableRow.addView(col1);
 

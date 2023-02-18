@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        android:id="@+id/tvIdReserva"
+        android:id="@+id/tvNumeroTelefono"
         android:layout_width="154dp"
         android:layout_height="56dp"
         android:fontFamily="sans-serif-black"
