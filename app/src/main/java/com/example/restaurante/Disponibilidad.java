@@ -42,7 +42,7 @@ public class Disponibilidad extends AppCompatActivity implements View.OnClickLis
         numeroMesasDisponibles = 25 - numeroMesasOcupadas;
         tvDisponibles.setText(String.valueOf(numeroMesasDisponibles));
 
-        Toast.makeText(getApplicationContext(), "mesas: "+numeroMesasOcupadas, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "mesas: "+numeroMesasOcupadas, Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onClick(View v) {

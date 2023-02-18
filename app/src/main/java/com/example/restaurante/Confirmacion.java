@@ -71,7 +71,7 @@ public class Confirmacion extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(getApplicationContext(), "CONFIRMADO ", Toast.LENGTH_SHORT).show();
             } else {
                 // Mensaje de error, el registro ya existe
-                Toast.makeText(Confirmacion.this, "El registro ya existe", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Confirmacion.this, "YA SE HA CONFRIMADO ANTERIORMENTE", Toast.LENGTH_SHORT).show();
             }
 
             db.close();
