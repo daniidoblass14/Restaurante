@@ -76,23 +76,25 @@ public class Pago extends AppCompatActivity implements View.OnClickListener {
         if(v.getId() == R.id.btnPagar){
 
             int numeroTelefono = Integer.parseInt(edtIdReserva.getText().toString());
+            String fecha ="";
 
             //Abrimos la base de datos, de forma leectura.
             ActivitySQLiteHelper acdbh = new ActivitySQLiteHelper(Pago.this, "restaurante",null,1);
             SQLiteDatabase db = acdbh.getReadableDatabase();
 
             //Obtenemos el nombre de la reserva.
-            Cursor cNombre = db.rawQuery("SELECT nombre FROM reservas WHERE numeroTelefono = "+numeroTelefono,null);
+            Cursor cNombre = db.rawQuery("SELECT nombre,fecha FROM reservas WHERE numeroTelefono = "+numeroTelefono,null);
 
             if (cNombre.moveToFirst()) {
                 //Recorremos el cursor hasta que no haya más registros
                 do {
                     nombre = cNombre.getString(0);
+                    fecha = cNombre.getString(1);
                 } while(cNombre.moveToNext());
             }
 
             // Sentencia SQL para insertar el nuevo registro
-            db.execSQL("INSERT INTO pagos (numeroTelefono, nombre, precio) VALUES ('" + numeroTelefono + "', '" + nombre + "','" + cuenta + "')");
+            db.execSQL("INSERT INTO pagos (numeroTelefono, nombre, fecha, precio) VALUES ('" + numeroTelefono + "', '" + nombre + "', '" + fecha + "','" + cuenta + "')");
             Toast.makeText(getApplicationContext(), "CONFIRMADO ", Toast.LENGTH_SHORT).show();
 
             //Cerramos el cursor.

@@ -5,27 +5,35 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        android:id="@+id/tvTotal"
-        android:layout_width="128dp"
-        android:layout_height="312dp"
-        android:layout_above="@+id/btnVolver"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="30dp"
+        android:id="@+id/tvTotalDelDia"
+        android:layout_width="154dp"
+        android:layout_height="56dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="Disponibles"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="217dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="128dp"
+        android:layout_height="113dp"
+        android:layout_below="@id/tvTotalDelDia"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="217dp" />
-
-
-
     <Button
         android:id="@+id/btnVolver"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tvTotal"
         android:layout_centerInParent="true"
         android:text="volver"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="292dp" />
+        tools:layout_editor_absoluteY="292dp"
+        tools:ignore="NotSibling" />
 </RelativeLayout>
