@@ -32,32 +32,33 @@
         android:id="@+id/tvPrecio"
         android:layout_width="154dp"
         android:layout_height="56dp"
+        android:layout_above="@id/btnPagar"
+        android:layout_centerInParent="true"
+        android:enabled="false"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="217dp"
-        android:layout_centerInParent="true"
-        android:layout_above="@id/btnPagar"
         android:visibility="invisible"
-        android:enabled="false"/>
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="217dp" />
 
     <Button
         android:id="@+id/btnPagar"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:enabled="false"
         android:text="PAGAR"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="292dp"
         android:visibility="invisible"
-        android:enabled="false"/>
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="292dp" />
+
     <Button
         android:id="@+id/btnCuenta"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
+        android:layout_above="@id/tvPrecio"
         android:layout_centerInParent="true"
         android:text="MOSTRAR CUENTA"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="292dp"
-        android:layout_above="@id/tvPrecio"/>
+        tools:layout_editor_absoluteY="292dp" />
 </RelativeLayout>

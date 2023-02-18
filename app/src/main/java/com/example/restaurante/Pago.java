@@ -41,16 +41,36 @@ public class Pago extends AppCompatActivity implements View.OnClickListener {
 
         if(v.getId() == R.id.btnCuenta){
 
-            btnCuenta.setEnabled(false);
-            btnPagar.setVisibility(View.VISIBLE);
-            btnPagar.setEnabled(true);
-            tvPrecio.setVisibility(View.VISIBLE);
-            tvPrecio.setEnabled(true);
-
             //Generamos el precio de la cuenta
             Random random = new Random();
             cuenta = random.nextInt(86) + 25;
             tvPrecio.setText(String.valueOf(cuenta));
+
+            int numeroTelefono = Integer.parseInt(edtIdReserva.getText().toString());
+
+            //Abrimos la base de datos, de forma leectura.
+            ActivitySQLiteHelper acdbh = new ActivitySQLiteHelper(Pago.this, "restaurante",null,1);
+            SQLiteDatabase db = acdbh.getReadableDatabase();
+
+            //Comprobamos que si existe en la bbdd
+            Cursor c = db.rawQuery("SELECT COUNT(*) FROM pagos WHERE numeroTelefono = "+numeroTelefono,null);
+            if (c.moveToFirst() && c.getInt(0) == 0) {
+
+                //Habilitamos las opciones para procesar el pago.
+                btnCuenta.setEnabled(false);
+                btnPagar.setVisibility(View.VISIBLE);
+                btnPagar.setEnabled(true);
+                tvPrecio.setVisibility(View.VISIBLE);
+                tvPrecio.setEnabled(true);
+
+            } else {
+                // Mensaje de error, el registro ya existe
+                Toast.makeText(Pago.this, "El cliente ya ha pagado.", Toast.LENGTH_SHORT).show();
+            }
+            // Cerrar el cursor
+            c.close();
+            // Cerrar la base de datos
+            db.close();
 
         }
         if(v.getId() == R.id.btnPagar){
@@ -62,7 +82,7 @@ public class Pago extends AppCompatActivity implements View.OnClickListener {
             SQLiteDatabase db = acdbh.getReadableDatabase();
 
             //Obtenemos el nombre de la reserva.
-            Cursor cNombre = db.rawQuery("SELECT nombre FROM reservas WHERE id = "+numeroTelefono,null);
+            Cursor cNombre = db.rawQuery("SELECT nombre FROM reservas WHERE numeroTelefono = "+numeroTelefono,null);
 
             if (cNombre.moveToFirst()) {
                 //Recorremos el cursor hasta que no haya más registros
@@ -70,20 +90,13 @@ public class Pago extends AppCompatActivity implements View.OnClickListener {
                     nombre = cNombre.getString(0);
                 } while(cNombre.moveToNext());
             }
-            cNombre.close();
 
-            //Comprobamos que si existe en la bbdd
-            Cursor c = db.rawQuery("SELECT COUNT(*) FROM pagos WHERE numeroTelefono = "+numeroTelefono,null);
-            if (c.moveToFirst() && c.getInt(0) == 0) {
-                // Sentencia SQL para insertar el nuevo registro
-                db.execSQL("INSERT INTO pagos (numeroTelefono, nombre, precio) VALUES ('" + numeroTelefono + "', '" + nombre + "','" + cuenta + "')");
-                Toast.makeText(getApplicationContext(), "CONFIRMADO ", Toast.LENGTH_SHORT).show();
-            } else {
-                // Mensaje de error, el registro ya existe
-                Toast.makeText(Pago.this, "El registro ya existe", Toast.LENGTH_SHORT).show();
-            }
-            // Cerrar el cursor
-            c.close();
+            // Sentencia SQL para insertar el nuevo registro
+            db.execSQL("INSERT INTO pagos (numeroTelefono, nombre, precio) VALUES ('" + numeroTelefono + "', '" + nombre + "','" + cuenta + "')");
+            Toast.makeText(getApplicationContext(), "CONFIRMADO ", Toast.LENGTH_SHORT).show();
+
+            //Cerramos el cursor.
+            cNombre.close();
             // Cerrar la base de datos
             db.close();
 
