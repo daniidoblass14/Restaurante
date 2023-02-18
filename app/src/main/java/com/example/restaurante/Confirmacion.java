@@ -1,7 +1,6 @@
 package com.example.restaurante;
 
 import android.annotation.SuppressLint;
-import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -9,9 +8,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.RelativeLayout;
-import android.widget.SimpleCursorAdapter;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -30,7 +27,7 @@ public class Confirmacion extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.confirmaciones_layout);
 
-        edtIdReserva = (EditText) findViewById(R.id.edtIdReserva);
+        edtIdReserva = (EditText) findViewById(R.id.edtNumeroTelfono);
         tablaConfirmados = (TableLayout) findViewById(R.id.table_layout);
 
         RelativeLayout botonesConfirmacion = findViewById(R.id.layoutConfirmacion);
