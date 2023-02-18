@@ -19,7 +19,7 @@ public class Anular extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anular_layout);
 
-        edtNumeroTelefono = (EditText) findViewById(R.id.edtNumeroTelfono);
+        edtNumeroTelefono = (EditText) findViewById(R.id.edtNumeroTelefono);
         btnAnular = (Button) findViewById(R.id.btnAnular);
 
         btnAnular.setOnClickListener(this);

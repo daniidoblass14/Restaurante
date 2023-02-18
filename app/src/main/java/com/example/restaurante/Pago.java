@@ -29,7 +29,7 @@ public class Pago extends AppCompatActivity implements View.OnClickListener {
         btnCuenta = (Button) findViewById(R.id.btnCuenta);
         btnPagar = (Button) findViewById(R.id.btnPagar);
         tvPrecio = (TextView) findViewById(R.id.tvPrecio);
-        edtIdReserva = (EditText) findViewById(R.id.edtNumeroTelfono);
+        edtIdReserva = (EditText) findViewById(R.id.edtNumeroTelefono);
 
         btnPagar.setOnClickListener(this);
         btnCuenta.setOnClickListener(this);
@@ -55,14 +55,14 @@ public class Pago extends AppCompatActivity implements View.OnClickListener {
         }
         if(v.getId() == R.id.btnPagar){
 
-            int id = Integer.parseInt(edtIdReserva.getText().toString());
+            int numeroTelefono = Integer.parseInt(edtIdReserva.getText().toString());
 
             //Abrimos la base de datos, de forma leectura.
             ActivitySQLiteHelper acdbh = new ActivitySQLiteHelper(Pago.this, "restaurante",null,1);
             SQLiteDatabase db = acdbh.getReadableDatabase();
 
             //Obtenemos el nombre de la reserva.
-            Cursor cNombre = db.rawQuery("SELECT nombre FROM reservas WHERE id = "+id,null);
+            Cursor cNombre = db.rawQuery("SELECT nombre FROM reservas WHERE id = "+numeroTelefono,null);
 
             if (cNombre.moveToFirst()) {
                 //Recorremos el cursor hasta que no haya más registros
@@ -73,10 +73,10 @@ public class Pago extends AppCompatActivity implements View.OnClickListener {
             cNombre.close();
 
             //Comprobamos que si existe en la bbdd
-            Cursor c = db.rawQuery("SELECT COUNT(*) FROM pagos WHERE idReserva = "+id,null);
+            Cursor c = db.rawQuery("SELECT COUNT(*) FROM pagos WHERE numeroTelefono = "+numeroTelefono,null);
             if (c.moveToFirst() && c.getInt(0) == 0) {
                 // Sentencia SQL para insertar el nuevo registro
-                db.execSQL("INSERT INTO pagos (idReserva, nombre, precio) VALUES ('" + id + "', '" + nombre + "','" + cuenta + "')");
+                db.execSQL("INSERT INTO pagos (numeroTelefono, nombre, precio) VALUES ('" + numeroTelefono + "', '" + nombre + "','" + cuenta + "')");
                 Toast.makeText(getApplicationContext(), "CONFIRMADO ", Toast.LENGTH_SHORT).show();
             } else {
                 // Mensaje de error, el registro ya existe

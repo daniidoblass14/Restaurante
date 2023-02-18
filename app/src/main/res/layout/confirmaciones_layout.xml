@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteY="217dp" />
 
     <EditText
-        android:id="@+id/edtNumeroTelfono"
+        android:id="@+id/edtNumeroTelefono"
         android:layout_width="155dp"
         android:layout_height="55dp"
         android:layout_alignParentEnd="true"

@@ -11,12 +11,12 @@
         android:layout_height="56dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="Id de la reserva"
+        android:text="NUMERO DE TLF"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="217dp" />
 
     <EditText
-        android:id="@+id/edtNumeroTelfono"
+        android:id="@+id/edtNumeroTelefono"
         android:layout_width="155dp"
         android:layout_height="55dp"
         android:layout_alignParentEnd="true"
@@ -25,7 +25,8 @@
         android:ems="10"
         android:inputType="number"
         tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="218dp" />
+        tools:layout_editor_absoluteY="218dp"
+        android:maxLength="9"/>
 
     <TextView
         android:id="@+id/tvPrecio"

@@ -27,7 +27,7 @@ public class Confirmacion extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.confirmaciones_layout);
 
-        edtIdReserva = (EditText) findViewById(R.id.edtNumeroTelfono);
+        edtIdReserva = (EditText) findViewById(R.id.edtNumeroTelefono);
         tablaConfirmados = (TableLayout) findViewById(R.id.table_layout);
 
         RelativeLayout botonesConfirmacion = findViewById(R.id.layoutConfirmacion);
