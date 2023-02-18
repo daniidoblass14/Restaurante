@@ -100,4 +100,28 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="NOMBRE" />
+
+    <TextView
+        android:id="@+id/tvNumero"
+        android:layout_width="88dp"
+        android:layout_height="34dp"
+        android:layout_below="@id/tvNombre"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="NUMERO TLF" />
+
+    <EditText
+        android:id="@+id/edtNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@id/edtNombre"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="114dp"
+        android:layout_toEndOf="@+id/tvNumero"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="292dp"
+        android:maxLength="9"/>
+
 </RelativeLayout>

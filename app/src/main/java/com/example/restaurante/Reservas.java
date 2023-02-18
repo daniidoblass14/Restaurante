@@ -25,7 +25,7 @@ import java.util.Calendar;
 
 public class Reservas extends AppCompatActivity implements View.OnClickListener{
     private Button btnFecha,btnHora,btnReserva;
-    private EditText edtFecha, edtHora,edtNombre;
+    private EditText edtFecha, edtHora,edtNombre,edtNumeroTlf;
     private int dia,mes,ano,hora,minutos;
     private Spinner spinnerPersonas;
     private String fechaBaseDatos;
@@ -40,6 +40,7 @@ public class Reservas extends AppCompatActivity implements View.OnClickListener{
         btnReserva = (Button) findViewById(R.id.btnReserva);
         btnFecha = (Button) findViewById(R.id.btnFecha);
         btnHora = (Button) findViewById(R.id.btnHora);
+        edtNumeroTlf = (EditText) findViewById(R.id.edtNumero);
         edtFecha = (EditText) findViewById(R.id.edtFecha);
         edtHora = (EditText) findViewById(R.id.edtHora);
         edtNombre = (EditText) findViewById(R.id.edtNombre);
@@ -132,6 +133,7 @@ public class Reservas extends AppCompatActivity implements View.OnClickListener{
             SQLiteDatabase db = acdbh.getWritableDatabase();
 
             ContentValues values = new ContentValues();
+            values.put("numeroTelefono", Integer.parseInt(edtNumeroTlf.getText().toString()));
             values.put("nombre", edtNombre.getText().toString());
             values.put("fecha",edtFecha.getText().toString());
             values.put("hora",edtHora.getText().toString());

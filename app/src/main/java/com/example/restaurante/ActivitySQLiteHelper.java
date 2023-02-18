@@ -8,9 +8,9 @@ import androidx.annotation.Nullable;
 
 
 public class ActivitySQLiteHelper extends SQLiteOpenHelper {
-    String CREATE_TABLE_RESERVAS = "CREATE TABLE reservas (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, fecha TEXT, hora TEXT, personas INTEGER, mesas INTEGER)";
-    String CREATE_TABLE_CONFIR = "CREATE TABLE confirmaciones (idReserva INTEGER, nombre TEXT)";
-    String CREATE_TABLE_PAGOS = "CREATE TABLE pagos (idReserva INTEGER, nombre TEXT,precio INTEGER)";
+    String CREATE_TABLE_RESERVAS = "CREATE TABLE reservas (numeroTelefono INTEGER PRIMARY KEY, nombre TEXT, fecha TEXT, hora TEXT, personas INTEGER, mesas INTEGER)";
+    String CREATE_TABLE_CONFIR = "CREATE TABLE confirmaciones (numeroTelefono INTEGER, nombre TEXT)";
+    String CREATE_TABLE_PAGOS = "CREATE TABLE pagos (numeroTelefono INTEGER, nombre TEXT,precio INTEGER)";
 
 
     public ActivitySQLiteHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
