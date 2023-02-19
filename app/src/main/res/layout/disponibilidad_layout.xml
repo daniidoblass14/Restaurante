@@ -66,14 +66,4 @@
         android:textIsSelectable="false"
         tools:layout_editor_absoluteX="150dp"
         tools:layout_editor_absoluteY="292dp" />
-
-    <Button
-        android:id="@+id/btnVolver"
-        android:layout_width="172dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvOcupadas"
-        android:layout_centerInParent="true"
-        android:text="volver"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="292dp" />
 </RelativeLayout>

@@ -15,8 +15,7 @@
         tools:layout_editor_absoluteY="217dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textSize="200px"/>
+        android:layout_centerVertical="true" />
 
     <ListView
         android:layout_width="match_parent"

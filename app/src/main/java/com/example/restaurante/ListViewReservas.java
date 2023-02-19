@@ -8,27 +8,38 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class ListViewReservas  extends AppCompatActivity implements View.OnClickListener{
 
     private ListView lista;
+    private TextView tvReservasDia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_layout);
         lista = (ListView) findViewById(R.id.Lista);
+        tvReservasDia = (TextView) findViewById(R.id.tvReservasDia);
+
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/M/yyyy");
+        String currentDate = dateFormat.format(calendar.getTime());
+
+        tvReservasDia.setText("TODAS LAS RESERVAS DEL DIA :" +currentDate);
 
         //Abrimos la base de datos, de forma leectura.
         ActivitySQLiteHelper acdbh = new ActivitySQLiteHelper(ListViewReservas.this, "restaurante",null,1);
         SQLiteDatabase db = acdbh.getReadableDatabase();
 
-        Cursor cursor = db.rawQuery("SELECT nombre,hora,numeroTelefono FROM reservas",null);
+        Cursor cursor = db.rawQuery("SELECT nombre,hora,numeroTelefono FROM reservas WHERE fecha = '"+currentDate+"'",null);
 
         List<TotalReservas> reservasList = new ArrayList<>();
 

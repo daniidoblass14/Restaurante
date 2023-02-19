@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Disponibilidad extends AppCompatActivity implements View.OnClickListener {
+public class Disponibilidad extends AppCompatActivity{
 
     private TextView tvDisponibles;
     private TextView tvOcupadas;
@@ -58,9 +58,5 @@ public class Disponibilidad extends AppCompatActivity implements View.OnClickLis
         tvDisponibles.setText(String.valueOf(numeroMesasDisponibles));
 
         //Toast.makeText(getApplicationContext(), "mesas: "+numeroMesasOcupadas, Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onClick(View v) {
-
     }
 }
