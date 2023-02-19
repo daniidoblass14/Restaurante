@@ -1,4 +1,8 @@
 package com.example.restaurante;
+/**
+ * autor : Daniel Doblas Florido
+ * fecha : 19/02/2023
+ */
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;

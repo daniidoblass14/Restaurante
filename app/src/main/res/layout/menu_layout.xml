@@ -10,7 +10,7 @@
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="RESERVAS"
+        android:text="@string/btn_reservas"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="292dp"
         android:layout_above="@id/btnAnular"/>
@@ -19,7 +19,7 @@
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="ANULAR RESERVAS"
+        android:text="@string/btn_anular"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="292dp"
         android:layout_above="@id/btnConfirmacion"/>
@@ -28,7 +28,7 @@
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="DISPONIBILIDAD"
+        android:text="@string/btn_disponibilidad"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="292dp"
         android:layout_above="@id/btnPago"/>
@@ -38,7 +38,7 @@
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="CONFIRMACION"
+        android:text="@string/btn_confirmacion"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="292dp"
         android:layout_above="@id/btnDisponibilidad"/>
@@ -48,7 +48,7 @@
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="PAGO"
+        android:text="@string/btn_pago"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="292dp" />
     <Button
@@ -56,8 +56,18 @@
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="TOTAL RECAUDADO"
+        android:text="@string/btn_total"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="292dp"
         android:layout_below="@id/btnPago"/>
+
+    <Button
+        android:id="@+id/btnListView"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTotalRecaudado"
+        android:layout_centerInParent="true"
+        android:text="@string/btn_listado"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="292dp" />
 </RelativeLayout>

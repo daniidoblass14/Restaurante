@@ -1,4 +1,8 @@
 package com.example.restaurante;
+/**
+ * autor : Daniel Doblas Florido
+ * fecha : 19/02/2023
+ */
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,7 +25,7 @@ public class TotalRecaudado extends AppCompatActivity {
         setContentView(R.layout.total_layout);
 
         tvTotal = (TextView) findViewById(R.id.tvTotal);
-        tvTotalDelDia = (TextView) findViewById(R.id.tvTotalDelDia);
+        tvTotalDelDia = (TextView) findViewById(R.id.tvReservasDia);
 
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/M/yyyy");

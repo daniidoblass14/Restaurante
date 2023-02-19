@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Restaurante</string>
+    <string name="btn_reservas">RESERVAS</string>
+    <string name="btn_anular">ANULAR RESERVAS</string>
+    <string name="btn_disponibilidad">DISPONIBILIDAD</string>
+    <string name="btn_confirmacion">CONFIRMACION</string>
+    <string name="btn_pago">PAGO</string>
+    <string name="btn_total">TOTAL RECAUDADO</string>
+    <string name="btn_listado">LISTADO DE RESERVAS</string>
 </resources>

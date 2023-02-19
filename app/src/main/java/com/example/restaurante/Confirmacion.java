@@ -1,5 +1,10 @@
 package com.example.restaurante;
 
+/**
+ * autor : Daniel Doblas Florido
+ * fecha : 19/02/2023
+ */
+
 import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,6 +13,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -17,11 +23,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Confirmacion extends AppCompatActivity implements View.OnClickListener {
     private EditText edtIdReserva;
     private ArrayList<View> botones = new ArrayList<>();
     private TableLayout tablaConfirmados;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

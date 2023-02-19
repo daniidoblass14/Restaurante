@@ -1,5 +1,10 @@
 package com.example.restaurante;
 
+/**
+ * autor : Daniel Doblas Florido
+ * fecha : 19/02/2023
+ */
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -66,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intentConfirmacion = new Intent(this,Confirmacion.class);
         Intent intentDisponibilidad = new Intent(this,Disponibilidad.class);
         Intent intentTotalRecaudado = new Intent(this,TotalRecaudado.class);
+        Intent intentListView = new Intent(this,ListViewReservas.class);
 
         if(v.getId() == R.id.btnReservas){
 
@@ -115,6 +121,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v.getId() == R.id.btnTotalRecaudado){
 
             startActivity(intentTotalRecaudado);
+        }
+
+        if(v.getId() == R.id.btnListView){
+
+            startActivity(intentListView);
         }
     }
 }

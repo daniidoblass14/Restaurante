@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        android:id="@+id/tvTotalDelDia"
+        android:id="@+id/tvReservasDia"
         android:layout_width="154dp"
         android:layout_height="56dp"
         android:fontFamily="sans-serif-black"
@@ -20,7 +20,7 @@
         android:id="@+id/tvTotal"
         android:layout_width="128dp"
         android:layout_height="113dp"
-        android:layout_below="@id/tvTotalDelDia"
+        android:layout_below="@id/tvReservasDia"
         android:layout_centerInParent="true"
         android:fontFamily="sans-serif-black"
         android:gravity="center"

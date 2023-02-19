@@ -27,6 +27,7 @@
         <activity android:name=".Confirmacion" />
         <activity android:name=".Disponibilidad" />
         <activity android:name=".TotalRecaudado" />
+        <activity android:name=".ListViewReservas" />
 
     </application>
 
